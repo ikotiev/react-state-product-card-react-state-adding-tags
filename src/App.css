@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   min-height: 100vh;
+}
+
+
+
+.imageProduct {
+  width: 300px;
+  height: 210px;
+  border: none;
+  background-image: url('./image/chrome_ZA3GBBLTei.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.aboutProduct {
+  width: 280px;
+  height: 285px;
+  border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
+}
+
+.priceAndDescription {
+  width: 280px;
+  height: 137.5px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1.5px solid rgb(173, 172, 172);
+}
+
+.GetShortDescription {
+  width: 280px;
+  height: 137.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+
+}
+
+.product {
+  margin: 0;
+  position: relative;
+  width: 300px;
+  height: 515px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px rgb(125, 124, 124);
+}
+
+.priceProduct {}
+
+.infoProduct {
+  font-weight: 700;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
 }
 
-.App-link {
-  color: #61dafb;
+.btnblock {
+  display: flex;
+  justify-content: flex-end;
+  height: 45px;
+  width: 140px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btninfo:active {
+  box-shadow: 0px 0px 8px 2px rgb(57, 149, 194);
+  color: aliceblue;
+  background-color: rgb(57, 149, 194);
+}
+
+.btninfo {
+  outline: none;
+  margin: 0;
+  border: 1px solid rgb(53, 141, 213);
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+  background-color: transparent;
+  color: rgb(53, 141, 213);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.shortinfo {
+  font-size: 18px;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.btnBascet {
+  width: 190px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: azure;
+  background-color: rgb(41, 154, 41);
+}
+.btnclouse{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: red;
+}
+.infoBlock {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: absolute;
+  left: 280px;
+  top: 218px;
+  width: 250px;
+  height: 90px;
+  box-shadow: 2px 2px 8px rgb(125, 124, 124);
+  background-color: white;
+}
+
+.longinfo {
+  font-size: 20px;
+  margin: 0;
 }
