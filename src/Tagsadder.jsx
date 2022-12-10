@@ -9,16 +9,16 @@ const Tag = () => {
     const [blur, setBlur] = useState(false);
     const [sended, setSended] = useState(false)
 
-    const hendleSetText = (e) => {
+    const handleSetText = (e) => {
         setText(e.target.value)  // Позволяет нам вводить текст в инпут 
     }
 
-    const hendleSetBlur = () => {
+    const handleSetBlur = () => {
         setBlur(true)
         setSended(false)
     }
 
-    const hendleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()      // При отправке формы мы должны остановить действие браузер по умолчанию 
         if (text.trim()) {     //Проверка на пустату строк если строка пустая то false
             console.log(text.trim());     // Вы водить текст в кансоль 
@@ -43,25 +43,24 @@ const Tag = () => {
         setTag(filtered);
     };
 
-    const hendleSetName = () => !text && blur ? 'inputer is-error' : 'inputer'
+    const handleSetName = () => !text && blur ? 'inputer is-error' : 'inputer'
 
 
-    const hendleSetHolder = () => !text && blur ? 'пустой инпут' : 'в ведите тег'
+    const handleSetHolder = () => !text && blur ? 'пустой инпут' : 'введите тег'
 
     return (
 
         <div className='tagbox'>
-            <form onSubmit={hendleSubmit} className='textform'>
+            <form onSubmit={handleSubmit} className='textform'>
                 <input
-                    placeholder={hendleSetHolder()}
-                    className={hendleSetName()}
+                    placeholder={handleSetHolder()}
+                    className={handleSetName()}
                     type="text"
-                    onBlur={hendleSetBlur}
+                    onBlur={handleSetBlur}
                     value={text}
-                    onChange={hendleSetText}
+                    onChange={handleSetText}
                 />
                 <button disabled={!text} className={!text ? 'btn disabled' : 'btn'}><p className='btntext'>click</p></button>
-                {/* <button onClick={() => console.log(tag)} className='btn' >check</button> */}
             </form>
             <div className='tegmenu'>
                 <div className="main_content_div">
@@ -80,29 +79,9 @@ const Tag = () => {
                     ))}
                 </div>
             </div>
-
-            {/* <Tags text={tag.forEach((item) => item)}/> */}
         </div>
         
-        // {initialState.map((el, index) => (
-        //     <div className="tags">
-        //       {el.name}{" "}
-        //       <span
-        //         role="button"
-        //         onClick={() => {
-        //           deleteTagsHandler(index);
-        //         }}
-        //       >
-        //         x
-        //       </span>{" "}
-        //     </div>
-        //   ))}
-
     );
-
-
-
-
 
 }
 
